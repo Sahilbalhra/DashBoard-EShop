@@ -8,38 +8,47 @@ import CreditCardSharpIcon from "@mui/icons-material/CreditCardSharp";
 import AccountCircleSharpIcon from "@mui/icons-material/AccountCircleSharp";
 import LogoutSharpIcon from "@mui/icons-material/LogoutSharp";
 import PollIcon from "@mui/icons-material/Poll";
-import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
+import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import SettingsIcon from "@mui/icons-material/Settings";
 import AddModeratorIcon from "@mui/icons-material/AddModerator";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
     <div className='sidebar'>
       <div className='top'>
-        <span className='logo'>Admin Panel</span>
+        <Link to='/' style={{ textDecoration: "none" }}>
+          <span className='logo'>Admin Panel</span>
+        </Link>
       </div>
       <hr />
       <div className='center'>
         <ul>
           <p className='title'>Main</p>
           <li>
-            <span>
-              <DashboardIcon className='icon' /> Dashboard
-            </span>
+            <Link to='/' style={{ textDecoration: "none" }}>
+              <span>
+                <DashboardIcon className='icon' /> Dashboard
+              </span>
+            </Link>
           </li>
           <p className='title'>List</p>
           <li>
-            <span>
-              <PersonIcon className='icon' />
-              Users
-            </span>
+            <Link to='/users' style={{ textDecoration: "none" }}>
+              <span>
+                <PersonIcon className='icon' />
+                Users
+              </span>
+            </Link>
           </li>
           <li>
-            <span>
-              <StoreSharpIcon className='icon' />
-              Products
-            </span>
+            <Link to='/products' style={{ textDecoration: "none" }}>
+              <span>
+                <StoreSharpIcon className='icon' />
+                Products
+              </span>
+            </Link>
           </li>
           <li>
             <span>
